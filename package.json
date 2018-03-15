@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --server --serveStatic './src/' --files './src/*'"
   },
   "repository": {
     "type": "git",
@@ -14,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/deilan-shri-msk-2018/03-multimedia/issues"
   },
-  "homepage": "https://github.com/deilan-shri-msk-2018/03-multimedia#readme"
+  "homepage": "https://github.com/deilan-shri-msk-2018/03-multimedia#readme",
+  "devDependencies": {
+    "browser-sync": "2.23.6"
+  }
 }
