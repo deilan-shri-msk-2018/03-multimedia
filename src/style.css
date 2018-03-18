@@ -3,18 +3,28 @@
 }
 
 .Page__Inner {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     width: 100vw;
     height: 100vh;
+    position: relative;
 }
 
+#video,
 .Canvas-Container {
-    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 50%;
     width: 640px;
     height: 480px;
+    transform: translate(-50%, -50%);
     overflow: hidden;
+}
+
+#video {
+    display: none;
+}
+
+#canvas {
+    display: block;
 }
 
 .Canvas-Container::after {
@@ -28,10 +38,6 @@
     background-size: 320px 320px;
     opacity: 0.75;
     animation: noise 1s steps(8, end) infinite both;
-}
-
-#canvas {
-    display: block;
 }
 @keyframes noise {
     0% {
