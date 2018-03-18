@@ -4,8 +4,67 @@
 
 .Page__Inner {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 100vw;
     height: 100vh;
+}
+
+.Canvas-Container {
+    position: relative;
+    width: 640px;
+    height: 480px;
+    overflow: hidden;
+}
+
+.Canvas-Container::after {
+    position: absolute;
+    content: '';
+    top: -500px;
+    left: -500px;
+    width: 2000px;
+    height: 2000px;
+    background: transparent url('noise.png') 0 0;
+    background-size: 320px 320px;
+    opacity: 0.75;
+    animation: noise 1s steps(8, end) infinite both;
+}
+
+#canvas {
+    display: block;
+}
+@keyframes noise {
+    0% {
+        transform: translateX(0px, 0px);
+    }
+    10% {
+        transform: translate(-100px, 100px);
+    }
+    20% {
+        transform: translate(150px, -100px);
+    }
+    30% {
+        transform: translate(-100px, 100px);
+    }
+    40% {
+        transform: translate(100px, -150px);
+    }
+    50% {
+        transform: translate(-100px, 200px);
+    }
+    60% {
+        transform: translate(-200px, -100px);
+    }
+    70% {
+        transform: translateY(50px, 100px);
+    }
+    80% {
+        transform: translate(100px, -150px);
+    }
+    90% {
+        transform: translate(0px, 200px);
+    }
+    100% {
+        transform: translate(-100px, 100px);
+    }
 }
