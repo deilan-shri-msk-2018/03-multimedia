@@ -36,7 +36,7 @@ function drawAudio(analyser, canvasContext) {
     for (var i = 0; i < audioBufferLength; i++) {
 
         var v = audioData[i] / 128;
-        var y = v * height / 10;
+        var y = v * height / 4;
 
         if (i === 0) {
             canvasContext.moveTo(x, y);

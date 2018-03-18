@@ -11,17 +11,15 @@ navigator.mediaDevices.getUserMedia({
 
 function streamVideo(stream) {
     video.srcObject = stream;
-    video.play();
+    // video.play();
 
     var audioContext = new(window.AudioContext || window.webkitAudioContext)();
     var analyser = audioContext.createAnalyser();
     source = audioContext.createMediaStreamSource(stream);
     source.connect(analyser);
 
-    if (canvas) {
-        var canvasContext = canvas.getContext('2d');
-        canvas.width = width;
-        canvas.height = height;
-        window.draw(canvas, canvasContext, analyser, video);
-    }
+    var canvasContext = canvas.getContext('2d');
+    canvas.width = width;
+    canvas.height = height;
+    window.draw(canvas, canvasContext, analyser, video);
 };

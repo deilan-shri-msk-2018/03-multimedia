@@ -1,15 +1,11 @@
 .Page {
     margin: 0;
-}
-
-.Page__Inner {
     width: 100vw;
     height: 100vh;
     position: relative;
 }
 
-#video,
-.Canvas-Container {
+.Page__Inner {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -17,6 +13,15 @@
     height: 480px;
     transform: translate(-50%, -50%);
     overflow: hidden;
+}
+
+.element {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    color: white;
+    font-size: 12px;
+    white-space: pre-wrap;
 }
 
 #video {
