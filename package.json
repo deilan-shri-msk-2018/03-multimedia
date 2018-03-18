@@ -19,7 +19,5 @@
   "devDependencies": {
     "browser-sync": "2.23.6"
   },
-  "dependencies": {
-    "typed.js": "^2.0.6"
-  }
+  "dependencies": {}
 }
